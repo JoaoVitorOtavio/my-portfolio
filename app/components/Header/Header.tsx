@@ -41,11 +41,11 @@ const menuItens: IMenuItem[] = [
 ];
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     <HeaderContainer>
       {/* Menu deslizante */}
-      <SideMenu isopen={isOpen || false}>
+      <SideMenu isopen={isOpen}>
         <CloseContainer onClick={() => setIsOpen(false)}>
           <IoCloseOutline size={25} />
         </CloseContainer>

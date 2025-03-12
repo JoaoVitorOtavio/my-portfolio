@@ -1,5 +1,13 @@
+'use client';
+
+import { useState } from 'react';
 import GitHubCalendar from 'react-github-calendar';
-import { CalendarContainer, Title } from './GitHubContributions.module';
+import {
+  CalendarContainer,
+  Title,
+  YearButton,
+  YearsContainer,
+} from './GitHubContributions.module';
 
 export const github: { light: string[]; dark: string[] } = {
   light: ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39'],
@@ -7,6 +15,13 @@ export const github: { light: string[]; dark: string[] } = {
 };
 
 const GitHubContributions = () => {
+  const startYear = new Date().getFullYear();
+  const [year, setYear] = useState<number>(startYear);
+
+  const handleYearChange = (year: number) => {
+    setYear(year);
+  };
+
   return (
     <div>
       <Title>Gráfico de Contribuição</Title>
@@ -16,8 +31,20 @@ const GitHubContributions = () => {
           colorScheme="dark"
           username="JoaoVitorOtavio"
           blockSize={13}
+          year={year}
         />
       </CalendarContainer>
+      <YearsContainer>
+        {[...Array(5)].map((_, i) => (
+          <YearButton
+            key={i}
+            isActivated={year === startYear - i}
+            onClick={() => handleYearChange(startYear - i)}
+          >
+            {startYear - i}
+          </YearButton>
+        ))}
+      </YearsContainer>
     </div>
   );
 };
