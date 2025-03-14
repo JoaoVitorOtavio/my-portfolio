@@ -61,7 +61,6 @@ const Header = () => {
         </SideMenuContent>
       </SideMenu>
       <ContentContainer>
-        <p style={{ color: '#fff' }}>Image</p>
         <NavItems>
           <NavContainer>
             <NavTitle>About</NavTitle>
