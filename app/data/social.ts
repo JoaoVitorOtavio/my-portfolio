@@ -1,3 +1,4 @@
+import { IconType } from 'react-icons';
 import {
   BiLinkExternal,
   BiLogoGithub,
@@ -6,7 +7,15 @@ import {
 } from 'react-icons/bi';
 import { SiCodewars } from 'react-icons/si';
 
-export const socialLinks = [
+interface ISocial {
+  id: number;
+  name: string;
+  url: string;
+  icon: IconType;
+  status: string;
+}
+
+export const socialLinks: ISocial[] = [
   {
     id: 1,
     name: 'GitHub',
