@@ -11,15 +11,7 @@ import {
   Timeline,
   TimeLineContainer,
 } from './WorkExperience.module';
-
-interface IWorkExperience {
-  enterpriseName: string;
-  role: string;
-  time: string;
-  description: string;
-  imagePath: string;
-  isTheFirst?: boolean;
-}
+import { IWorkExperience } from './interfaces';
 
 const WorkExperience = ({
   enterpriseName,
