@@ -11,6 +11,10 @@ export const ImageContentContainer = styled.div`
   align-items: center;
   width: 30%;
   padding: 10px;
+
+  @media (min-width: ${(props) => props.theme.breakpoints.tablet}px) {
+    width: 15%;
+  }
 `;
 
 export const TimeLineContainer = styled.div`
@@ -45,6 +49,10 @@ export const EnterpriseInfoContainer = styled.div`
   flex-direction: column;
   gap: 8px;
   padding: 10px 16px;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.tablet}px) {
+    width: 85%;
+  }
 `;
 
 export const EnterpriseName = styled.p`
