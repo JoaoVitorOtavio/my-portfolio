@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
+export const ContentContainer = styled.div`
+  margin: 90px 0;
+`;
 export const Title = styled.h1`
   font-size: 36px;
   line-height: 3.7rem;

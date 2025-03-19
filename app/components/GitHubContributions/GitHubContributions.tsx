@@ -4,6 +4,7 @@ import { useState } from 'react';
 import GitHubCalendar from 'react-github-calendar';
 import {
   CalendarContainer,
+  ContentContainer,
   Title,
   YearButton,
   YearsContainer,
@@ -23,8 +24,9 @@ const GitHubContributions = () => {
   };
 
   return (
-    <div>
+    <ContentContainer>
       <Title>Gráfico de Contribuição</Title>
+      {/* TODO: Adicionar suspense para só exibir depois de carregado */}
       <CalendarContainer>
         <GitHubCalendar
           theme={github}
@@ -45,7 +47,7 @@ const GitHubContributions = () => {
           </YearButton>
         ))}
       </YearsContainer>
-    </div>
+    </ContentContainer>
   );
 };
 
