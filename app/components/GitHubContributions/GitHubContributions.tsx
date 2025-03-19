@@ -5,6 +5,7 @@ import GitHubCalendar from 'react-github-calendar';
 import {
   CalendarContainer,
   ContentContainer,
+  MainContainer,
   Title,
   YearButton,
   YearsContainer,
@@ -24,30 +25,32 @@ const GitHubContributions = () => {
   };
 
   return (
-    <ContentContainer>
+    <MainContainer>
       <Title>Gráfico de Contribuição</Title>
-      {/* TODO: Adicionar suspense para só exibir depois de carregado */}
-      <CalendarContainer>
-        <GitHubCalendar
-          theme={github}
-          colorScheme="dark"
-          username="JoaoVitorOtavio"
-          blockSize={13}
-          year={year}
-        />
-      </CalendarContainer>
-      <YearsContainer>
-        {[...Array(5)].map((_, i) => (
-          <YearButton
-            key={i}
-            isActivated={year === startYear - i}
-            onClick={() => handleYearChange(startYear - i)}
-          >
-            {startYear - i}
-          </YearButton>
-        ))}
-      </YearsContainer>
-    </ContentContainer>
+      <ContentContainer>
+        {/* TODO: Adicionar suspense para só exibir depois de carregado */}
+        <CalendarContainer>
+          <GitHubCalendar
+            theme={github}
+            colorScheme="dark"
+            username="JoaoVitorOtavio"
+            blockSize={13}
+            year={year}
+          />
+        </CalendarContainer>
+        <YearsContainer>
+          {[...Array(5)].map((_, i) => (
+            <YearButton
+              key={i}
+              isActivated={year === startYear - i}
+              onClick={() => handleYearChange(startYear - i)}
+            >
+              {startYear - i}
+            </YearButton>
+          ))}
+        </YearsContainer>
+      </ContentContainer>
+    </MainContainer>
   );
 };
 

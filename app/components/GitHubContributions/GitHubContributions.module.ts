@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 
-export const ContentContainer = styled.div`
+export const MainContainer = styled.div`
   margin: 90px 0;
+`;
+
+export const ContentContainer = styled.div`
+  @media (min-width: ${(props) => props.theme.breakpoints.desktop}px) {
+    display: flex;
+  }
 `;
 export const Title = styled.h1`
   font-size: 36px;
@@ -21,6 +27,10 @@ export const CalendarContainer = styled.div`
   border-radius: 8px;
   padding: 30px;
   margin-bottom: 15px;
+
+  @media (min-width: ${(props) => props.theme.breakpoints.desktop}px) {
+    width: 80%;
+  }
 `;
 
 export const YearsContainer = styled.div`
@@ -28,6 +38,12 @@ export const YearsContainer = styled.div`
   gap: 15px;
   flex-wrap: wrap;
   margin-bottom: 60px;
+  
+  @media (min-width: ${(props) => props.theme.breakpoints.desktop}px) {
+    width: 20%;
+    margin-bottom: 15px;
+    justify-content: center;
+  }
 `;
 
 interface IYearButton {
@@ -42,4 +58,10 @@ export const YearButton = styled.div<IYearButton>`
   border: 1px solid #27272b66;
   border-radius: 8px;
   background-color: ${(props) => (props.isActivated ? '#0cce6b' : '#27272b66')};
+
+  @media (min-width: ${(props) => props.theme.breakpoints.desktop}px) {
+    width: 40%;
+    text-align: center;
+    height: auto;
+  }
 `;
