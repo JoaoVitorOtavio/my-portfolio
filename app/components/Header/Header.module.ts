@@ -80,7 +80,7 @@ export const ContentContainer = styled.div`
   height: 100%;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 `;
 
