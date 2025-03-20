@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
   height: 50px;
-
+  padding: 13px 0;
   border-bottom: 1px solid;
   border-color: #27272a;
   border-bottom-width: 1px;
@@ -16,15 +16,17 @@ export const HeaderContainer = styled.header`
   line-height: 1.25rem;
 
   @media (min-width: ${(props) => props.theme.breakpoints.tablet}px) {
-    background-color: #27272a;
+    margin-bottom: 115px;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
+`;
 
-  @media (max-width: ${(props) => props.theme.breakpoints.tablet}px) {
-    background-color: yellow;
-  }
+export const MobileMenu = styled.div`
+  height: 100%;
 
-  @media (max-width: ${(props) => props.theme.breakpoints.mobile}px) {
-    background-color: green;
+  @media (min-width: ${(props) => props.theme.breakpoints.tablet}px) {
+    display: none;
   }
 `;
 
@@ -95,4 +97,28 @@ export const NavContainer = styled.ul`
 
 export const NavTitle = styled.li`
   color: #fff;
+`;
+
+export const DesktopContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  height: 100%;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.tablet - 1}px) {
+    display: none;
+  }
+`;
+
+export const DesktopMenuItem = styled.p`
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    border-bottom: 1px solid #3f3f46;
+  }
 `;

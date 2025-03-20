@@ -5,9 +5,12 @@ import { AiOutlineRead } from 'react-icons/ai';
 import {
   CloseContainer,
   ContentContainer,
+  DesktopContainer,
+  DesktopMenuItem,
   HeaderContainer,
   ItemTitle,
   MenuItemContainer,
+  MobileMenu,
   NavContainer,
   NavItems,
   NavTitle,
@@ -40,11 +43,11 @@ const menuItens: IMenuItem[] = [
   },
 ];
 
-const Header = () => {
+const MenuMobile = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
   return (
-    <HeaderContainer>
-      {/* Menu deslizante */}
+    <MobileMenu>
       <SideMenu isopen={isOpen}>
         <CloseContainer onClick={() => setIsOpen(false)}>
           <IoCloseOutline size={25} />
@@ -82,6 +85,25 @@ const Header = () => {
           <FaBars size={16} />
         </div>
       </ContentContainer>
+    </MobileMenu>
+  );
+};
+
+const DesktopMenu = () => {
+  return (
+    <DesktopContainer>
+      <DesktopMenuItem>About</DesktopMenuItem>
+      <DesktopMenuItem>Projects</DesktopMenuItem>
+      <DesktopMenuItem>Blog</DesktopMenuItem>
+    </DesktopContainer>
+  );
+};
+
+const Header = () => {
+  return (
+    <HeaderContainer>
+      <MenuMobile />
+      <DesktopMenu />
     </HeaderContainer>
   );
 };
