@@ -29,7 +29,7 @@ export const CalendarContainer = styled.div`
   margin-bottom: 15px;
 
   @media (min-width: ${(props) => props.theme.breakpoints.desktop}px) {
-    width: 80%;
+    width: 90%;
   }
 `;
 
@@ -40,7 +40,7 @@ export const YearsContainer = styled.div`
   margin-bottom: 60px;
   
   @media (min-width: ${(props) => props.theme.breakpoints.desktop}px) {
-    width: 20%;
+    width: 10%;
     margin-bottom: 15px;
     justify-content: center;
   }
