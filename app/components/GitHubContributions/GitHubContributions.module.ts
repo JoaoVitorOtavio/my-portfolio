@@ -38,7 +38,7 @@ export const YearsContainer = styled.div`
   gap: 15px;
   flex-wrap: wrap;
   margin-bottom: 60px;
-  
+
   @media (min-width: ${(props) => props.theme.breakpoints.desktop}px) {
     width: 10%;
     margin-bottom: 15px;
@@ -63,5 +63,10 @@ export const YearButton = styled.div<IYearButton>`
     width: 40%;
     text-align: center;
     height: auto;
+
+    cursor: pointer;
+    &:hover {
+      border: 1px solid #3f3f46;
+    }
   }
 `;
