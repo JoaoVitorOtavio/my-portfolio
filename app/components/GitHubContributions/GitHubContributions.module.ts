@@ -5,9 +5,9 @@ export const MainContainer = styled.div`
 `;
 
 export const ContentContainer = styled.div`
-  @media (min-width: ${(props) => props.theme.breakpoints.desktop}px) {
-    display: flex;
-  }
+  // @media (min-width: ${(props) => props.theme.breakpoints.desktop}px) {
+  //   display: flex;
+  // }
 `;
 export const Title = styled.h1`
   font-size: 36px;
@@ -39,11 +39,13 @@ export const YearsContainer = styled.div`
   flex-wrap: wrap;
   margin-bottom: 60px;
 
-  @media (min-width: ${(props) => props.theme.breakpoints.desktop}px) {
-    width: 10%;
-    margin-bottom: 15px;
-    justify-content: center;
-  }
+  // @media (min-width: ${(props) => props.theme.breakpoints.desktop}px) {
+  //   // background-color: red;
+  //   padding: 0 10px;
+  //   width: 10%;
+  //   margin-bottom: 15px;
+  //   justify-content: center;
+  // }
 `;
 
 interface IYearButton {
@@ -59,14 +61,14 @@ export const YearButton = styled.div<IYearButton>`
   border-radius: 8px;
   background-color: ${(props) => (props.isActivated ? '#0cce6b' : '#27272b66')};
 
-  @media (min-width: ${(props) => props.theme.breakpoints.desktop}px) {
-    width: 40%;
-    text-align: center;
-    height: auto;
-
-    cursor: pointer;
-    &:hover {
-      border: 1px solid #3f3f46;
-    }
+  cursor: pointer;
+  &:hover {
+    border: 1px solid #3f3f46;
   }
+  // @media (min-width: ${(props) => props.theme.breakpoints.desktop}px) {
+  //   width: 40%;
+  //   text-align: center;
+  //   height: auto;
+
+  // }
 `;

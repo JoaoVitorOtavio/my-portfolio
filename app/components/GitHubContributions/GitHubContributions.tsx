@@ -34,7 +34,8 @@ const GitHubContributions = () => {
             theme={github}
             colorScheme="dark"
             username="JoaoVitorOtavio"
-            blockSize={13}
+            blockSize={15}
+            blockMargin={5}
             year={year}
           />
         </CalendarContainer>
