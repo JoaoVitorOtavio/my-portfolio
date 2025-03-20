@@ -13,7 +13,7 @@ const Footer = () => {
         style={{ display: 'block' }} // Evita espaçamento extra
       />
       <DescriptionContainer>
-        <TagName>{'< JoaoVitorOtavio />'}</TagName>
+        <TagName>{'< JoaoVitorOtavio / >'}</TagName>
         <Copy>Copyright © João Vitor Otavio 2025</Copy>
         <Copy>All rights Reserved</Copy>
       </DescriptionContainer>
