@@ -10,7 +10,6 @@ export const ContentContainer = styled.div`
   // }
 `;
 export const Title = styled.h1`
-  font-size: 36px;
   line-height: 3.7rem;
   color: #fff;
   font-weight: 700;
