@@ -7,6 +7,7 @@ import {
   EnterpriseTime,
   ImageContainer,
   ImageContentContainer,
+  NameAndRoleContainer,
   Role,
   Timeline,
   TimeLineContainer,
@@ -32,10 +33,10 @@ const WorkExperience = ({
         </TimeLineContainer>
       </ImageContentContainer>
       <EnterpriseInfoContainer>
-        <div>
+        <NameAndRoleContainer>
           <EnterpriseName>{enterpriseName}</EnterpriseName>
           <Role>{role}</Role>
-        </div>
+        </NameAndRoleContainer>
         <EnterpriseTime>{time}</EnterpriseTime>
         <Description>{description}</Description>
       </EnterpriseInfoContainer>

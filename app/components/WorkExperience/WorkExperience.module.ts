@@ -47,12 +47,18 @@ export const EnterpriseInfoContainer = styled.div`
   width: 70%;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 15px;
   padding: 10px 16px;
 
   @media (max-width: ${(props) => props.theme.breakpoints.tablet}px) {
     width: 85%;
   }
+`;
+
+export const NameAndRoleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 `;
 
 export const EnterpriseName = styled.p`
@@ -75,7 +81,6 @@ export const EnterpriseTime = styled.p`
 
 export const Description = styled.p`
   color: #a1a1aa;
-  margin-top: 8px;
   letter-spacing: -0.4px;
 `;
 
