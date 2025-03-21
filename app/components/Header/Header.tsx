@@ -1,5 +1,7 @@
 'use client';
+import Link from 'next/link';
 import { FaBars, FaUserTie, FaLaptopCode } from 'react-icons/fa6';
+import { FaHome } from 'react-icons/fa';
 import { IoCloseOutline } from 'react-icons/io5';
 import { AiOutlineRead } from 'react-icons/ai';
 import {
@@ -26,6 +28,11 @@ interface IMenuItem {
 }
 
 const menuItens: IMenuItem[] = [
+  {
+    id: 0,
+    title: 'Home',
+    icon: FaHome,
+  },
   {
     id: 1,
     title: 'About',
@@ -90,9 +97,15 @@ const MenuMobile = () => {
 };
 
 const DesktopMenu = () => {
+  // TOOD: Item do menu ativado dependendo da pagina #0cce6b
   return (
     <DesktopContainer>
-      <DesktopMenuItem>About</DesktopMenuItem>
+      <DesktopMenuItem>
+        <Link href="/">Home</Link>
+      </DesktopMenuItem>
+      <DesktopMenuItem>
+        <Link href="/about">About</Link>
+      </DesktopMenuItem>
       <DesktopMenuItem>Projects</DesktopMenuItem>
       <DesktopMenuItem>Blog</DesktopMenuItem>
     </DesktopContainer>

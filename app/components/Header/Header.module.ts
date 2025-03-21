@@ -117,8 +117,10 @@ export const DesktopMenuItem = styled.p`
   line-height: 1.5rem;
   font-weight: 600;
   cursor: pointer;
+  border-bottom: 1px solid transparent;
 
   &:hover {
     border-bottom: 1px solid #3f3f46;
+    color: #0cce6b;
   }
 `;
