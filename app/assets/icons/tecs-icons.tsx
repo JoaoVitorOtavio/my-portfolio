@@ -160,7 +160,6 @@ export default function Icons() {
   }, [currentIndex]);
 
   const { Component } = icons[currentIndex];
-  console.log('currentIndex', currentIndex);
 
   return (
     <div
