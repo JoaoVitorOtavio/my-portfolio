@@ -1,20 +1,10 @@
 'use client';
-import { Geist, Geist_Mono } from 'next/font/google';
+import StyledComponentsRegistry from './registry';
 import './globals.css';
 import { ThemeProvider } from 'styled-components';
 import theme from './styles/theme';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
 
 export default function RootLayout({
   children,
@@ -23,11 +13,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body>
         <ThemeProvider theme={theme}>
-          <Header />
-          <main>{children}</main>
-          <Footer />
+          <StyledComponentsRegistry>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </StyledComponentsRegistry>
         </ThemeProvider>
       </body>
     </html>
