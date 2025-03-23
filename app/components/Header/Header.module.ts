@@ -31,7 +31,7 @@ export const MobileMenu = styled.div`
 `;
 
 interface SideMenuProps {
-  isopen: boolean;
+  isopen?: boolean;
 }
 
 export const SideMenu = styled.div<SideMenuProps>`

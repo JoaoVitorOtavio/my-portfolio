@@ -22,7 +22,7 @@ export const TimeLineContainer = styled.div`
 `;
 
 interface ITimeline {
-  isTheFirst: boolean;
+  $isTheFirst: boolean;
 }
 
 export const Timeline = styled.div<ITimeline>`
@@ -35,7 +35,7 @@ export const Timeline = styled.div<ITimeline>`
     content: '';
     position: absolute;
     width: 2px;
-    height: ${(props) => (props.isTheFirst ? '0px' : '350px')};
+    height: ${(props) => (props.$isTheFirst ? '0px' : '350px')};
     background-color: #27272b66;
     left: 50%;
     top: -1px;
@@ -82,6 +82,7 @@ export const EnterpriseTime = styled.p`
 export const Description = styled.p`
   color: #a1a1aa;
   letter-spacing: -0.4px;
+  line-height: 25px;
 `;
 
 export const ImageContainer = styled.div`

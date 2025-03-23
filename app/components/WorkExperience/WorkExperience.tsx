@@ -29,7 +29,7 @@ const WorkExperience = ({
           <Image width={50} height={50} src={imagePath} alt="Enterprise Logo" />
         </ImageContainer>
         <TimeLineContainer>
-          <Timeline isTheFirst={isTheFirst}></Timeline>
+          <Timeline $isTheFirst={isTheFirst}></Timeline>
         </TimeLineContainer>
       </ImageContentContainer>
       <EnterpriseInfoContainer>

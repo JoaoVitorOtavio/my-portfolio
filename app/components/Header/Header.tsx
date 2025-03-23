@@ -1,4 +1,5 @@
 'use client';
+
 import Link from 'next/link';
 import { FaBars, FaUserTie, FaLaptopCode } from 'react-icons/fa6';
 import { FaHome } from 'react-icons/fa';
@@ -55,7 +56,7 @@ const MenuMobile = () => {
 
   return (
     <MobileMenu>
-      <SideMenu isopen={isOpen}>
+      <SideMenu isopen={isOpen ? true : undefined}>
         <CloseContainer onClick={() => setIsOpen(false)}>
           <IoCloseOutline size={25} />
         </CloseContainer>

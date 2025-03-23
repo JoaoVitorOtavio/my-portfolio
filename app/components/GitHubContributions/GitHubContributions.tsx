@@ -43,7 +43,7 @@ const GitHubContributions = () => {
           {[...Array(5)].map((_, i) => (
             <YearButton
               key={i}
-              isActivated={year === startYear - i}
+              $isactivated={year === startYear - i}
               onClick={() => handleYearChange(startYear - i)}
             >
               {startYear - i}
