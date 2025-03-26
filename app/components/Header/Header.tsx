@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { FaBars, FaUserTie, FaLaptopCode } from 'react-icons/fa6';
+import { FaBars, FaUserTie } from 'react-icons/fa6';
 import { FaHome } from 'react-icons/fa';
 import { IoCloseOutline } from 'react-icons/io5';
 import { AiOutlineRead } from 'react-icons/ai';
@@ -14,9 +14,6 @@ import {
   ItemTitle,
   MenuItemContainer,
   MobileMenu,
-  NavContainer,
-  NavItems,
-  NavTitle,
   SideMenu,
   SideMenuContent,
 } from './Header.module';
@@ -26,6 +23,7 @@ interface IMenuItem {
   id: number;
   title: string;
   icon: React.FC<{ size?: number; color?: string }>;
+  href: string;
 }
 
 const menuItens: IMenuItem[] = [
@@ -33,21 +31,24 @@ const menuItens: IMenuItem[] = [
     id: 0,
     title: 'Home',
     icon: FaHome,
+    href: '/',
   },
   {
     id: 1,
     title: 'About',
     icon: FaUserTie,
+    href: '/about',
   },
-  {
-    id: 2,
-    title: 'Projects',
-    icon: FaLaptopCode,
-  },
+  // {
+  //   id: 2,
+  //   title: 'Projects',
+  //   icon: FaLaptopCode,
+  // },
   {
     id: 3,
     title: 'Blog',
     icon: AiOutlineRead,
+    href: '/blog',
   },
 ];
 
@@ -56,29 +57,24 @@ const MenuMobile = () => {
 
   return (
     <MobileMenu>
-      <SideMenu isopen={isOpen ? true : undefined}>
+      <SideMenu $isopen={isOpen}>
         <CloseContainer onClick={() => setIsOpen(false)}>
           <IoCloseOutline size={25} />
         </CloseContainer>
         <SideMenuContent>
           {menuItens.map((item) => (
-            <MenuItemContainer key={item.id}>
-              <ItemTitle>
-                <item.icon size={18} color={'#71717a'} />
-                <p>{item.title}</p>
-              </ItemTitle>
-            </MenuItemContainer>
+            <Link prefetch={false} href={item.href} key={item.id}>
+              <MenuItemContainer onClick={() => setIsOpen(false)}>
+                <ItemTitle>
+                  <item.icon size={18} color={'#71717a'} />
+                  <p>{item.title}</p>
+                </ItemTitle>
+              </MenuItemContainer>
+            </Link>
           ))}
         </SideMenuContent>
       </SideMenu>
       <ContentContainer>
-        <NavItems>
-          <NavContainer>
-            <NavTitle>About</NavTitle>
-            <NavTitle>Projects</NavTitle>
-            <NavTitle>Blog</NavTitle>
-          </NavContainer>
-        </NavItems>
         <div
           onClick={() => setIsOpen(!isOpen)}
           style={{
@@ -101,14 +97,13 @@ const DesktopMenu = () => {
   // TOOD: Item do menu ativado dependendo da pagina #0cce6b
   return (
     <DesktopContainer>
-      <DesktopMenuItem>
-        <Link href="/">Home</Link>
-      </DesktopMenuItem>
-      <DesktopMenuItem>
-        <Link href="/about">About</Link>
-      </DesktopMenuItem>
-      <DesktopMenuItem>Projects</DesktopMenuItem>
-      <DesktopMenuItem>Blog</DesktopMenuItem>
+      {menuItens.map((item) => (
+        <DesktopMenuItem key={item.id}>
+          <Link prefetch={false} href={item.href}>
+            {item.title}
+          </Link>
+        </DesktopMenuItem>
+      ))}
     </DesktopContainer>
   );
 };

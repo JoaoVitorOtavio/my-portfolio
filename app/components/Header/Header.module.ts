@@ -31,7 +31,7 @@ export const MobileMenu = styled.div`
 `;
 
 interface SideMenuProps {
-  isopen?: boolean;
+  $isopen?: boolean;
 }
 
 export const SideMenu = styled.div<SideMenuProps>`
@@ -44,7 +44,7 @@ export const SideMenu = styled.div<SideMenuProps>`
   background: #18181b;
   color: #fff;
   transform: ${(props) =>
-    props.isopen ? 'translateX(0)' : 'translateX(100%)'};
+    props.$isopen ? 'translateX(0)' : 'translateX(100%)'};
   transition: transform 0.4s ease-in-out;
 `;
 
@@ -84,19 +84,6 @@ export const ContentContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-`;
-
-export const NavItems = styled.nav`
-  display: none;
-`;
-
-export const NavContainer = styled.ul`
-  display: flex;
-  column-gap: 2rem;
-`;
-
-export const NavTitle = styled.li`
-  color: #fff;
 `;
 
 export const DesktopContainer = styled.div`
