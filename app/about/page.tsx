@@ -1,8 +1,7 @@
-export default function About() {
+'use client';
 
-  return (
-    <div>
-      <p>About Page</p>
-    </div>
-  )
-};
+import OnProgress from '../components/OnProgress/OnProgress';
+
+export default function About() {
+  return <OnProgress />;
+}
