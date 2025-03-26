@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const TagName = styled.p`
+export const TagName = styled.span`
   font-size: 20px;
   font-weight: 600;
   color: #0cce6b;
@@ -20,7 +20,7 @@ export const DescriptionContainer = styled.div`
   padding-bottom: 40px;
 `;
 
-export const Copy = styled.p`
+export const Copy = styled.span`
   font-size: 13px;
   color: #fff;
   letter-spacing: 1.5px;

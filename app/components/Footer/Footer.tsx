@@ -7,10 +7,9 @@ const Footer = () => {
       <Image
         src="/wave.svg"
         alt=""
-        layout="responsive"
+        style={{ width: '100%', objectFit: 'contain', height: 'auto' }}
         width={100}
         height={50}
-        style={{ display: 'block' }} // Evita espaçamento extra
       />
       <DescriptionContainer>
         <TagName>{'< JoaoVitorOtavio / >'}</TagName>
