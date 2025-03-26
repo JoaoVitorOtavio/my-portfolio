@@ -4,7 +4,7 @@ export const Works: IWorkExperience[] = [
   {
     enterpriseName: 'Sonoma Market',
     description:
-      'Desenvolvi e mantive sistemas usando ReactJS, Node.js e NestJS, incluindo um backoffice integrado ao ERP Millennium, um e-commerce completo e uma solução para transferência de produtos entre marketplaces. Também criei um Design System com Storybook e atuei em um projeto freelance de gestão de vendas.',
+      'Desenvolvi e mantive sistemas usando ReactJS, NextJS, Node.js e NestJS, incluindo um backoffice integrado ao ERP Millennium, um e-commerce completo e uma solução para transferência de produtos entre marketplaces. Também criei um Design System com Storybook e atuei em um projeto freelance de gestão de vendas.',
     imagePath: '/sonoma_logo.jpg',
     role: 'Full Stack Developer',
     time: 'Jun, 2021 - Fev, 2025',
