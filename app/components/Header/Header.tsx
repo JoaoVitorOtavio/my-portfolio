@@ -18,6 +18,7 @@ import {
   SideMenuContent,
 } from './Header.module';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 interface IMenuItem {
   id: number;
@@ -29,13 +30,13 @@ interface IMenuItem {
 const menuItens: IMenuItem[] = [
   {
     id: 0,
-    title: 'Home',
+    title: 'Início',
     icon: FaHome,
     href: '/',
   },
   {
     id: 1,
-    title: 'About',
+    title: 'Sobre',
     icon: FaUserTie,
     href: '/about',
   },
@@ -94,11 +95,12 @@ const MenuMobile = () => {
 };
 
 const DesktopMenu = () => {
-  // TOOD: Item do menu ativado dependendo da pagina #0cce6b
+  const pathname = usePathname();
+
   return (
     <DesktopContainer>
       {menuItens.map((item) => (
-        <DesktopMenuItem key={item.id}>
+        <DesktopMenuItem key={item.id} $isActive={pathname === item.href}>
           <Link prefetch={false} href={item.href}>
             {item.title}
           </Link>

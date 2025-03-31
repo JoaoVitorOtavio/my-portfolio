@@ -98,13 +98,18 @@ export const DesktopContainer = styled.div`
   }
 `;
 
-export const DesktopMenuItem = styled.p`
-  color: #fff;
+interface IItemMenu {
+  $isActive: boolean;
+}
+
+export const DesktopMenuItem = styled.p<IItemMenu>`
+  color: ${(props) => (props.$isActive ? '#0cce6b' : '#fff')};
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 600;
   cursor: pointer;
-  border-bottom: 1px solid transparent;
+  // border-bottom: 1px solid transparent;
+  border-bottom: ${(props) => (props.$isActive ? '1px solid #3f3f46' : 'none')};
 
   &:hover {
     border-bottom: 1px solid #3f3f46;
