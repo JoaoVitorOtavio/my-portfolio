@@ -159,6 +159,10 @@ h1 {
   font-size: 40px;
 }
 
+b {
+  font-weight: 700;
+}
+
 html,
 body {
   height: 100%;
