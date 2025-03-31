@@ -17,8 +17,13 @@ import GitHubContributions from './components/GitHubContributions/GitHubContribu
 import WorkExperience from './components/WorkExperience/WorkExperience';
 import Icons from './assets/icons/tecs-icons';
 import TechTicker from './components/TechTicker/TechTicker';
+import { useEffect } from 'react';
 
 export default function Home() {
+  useEffect(() => {
+    document.title = 'João Vitor Otavio | Desenvolvedor';
+  }, []);
+
   return (
     <>
       <Main>
@@ -87,6 +92,7 @@ export default function Home() {
             role={item.role}
             time={item.time}
             isTheFirst={item.isTheFirst}
+            link={item.link}
           />
         ))}
       </Main>

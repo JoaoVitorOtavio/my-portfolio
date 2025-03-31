@@ -1,15 +1,6 @@
 import styled from 'styled-components';
 
-export const Main = styled.main`
-  min-height: 100vh;
-  max-width: 80rem;
-  margin-left: auto;
-  margin-right: auto;
-
-  padding-left: 5%;
-  padding-right: 5%;
-  width: 90%;
-`;
+export const Main = styled.main``;
 
 export const TitleAndImageContainer = styled.div`
   display: flex;
