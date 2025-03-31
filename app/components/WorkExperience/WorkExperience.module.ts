@@ -5,12 +5,14 @@ export const ContentContainer = styled.div`
   display: flex;
 `;
 
-export const ImageContentContainer = styled.div`
+export const ImageContentContainer = styled.a`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 30%;
   padding: 10px;
+
+  cursor: pointer;
 
   @media (min-width: ${(props) => props.theme.breakpoints.tablet}px) {
     width: 15%;

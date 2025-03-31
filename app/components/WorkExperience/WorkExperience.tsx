@@ -14,6 +14,17 @@ import {
 } from './WorkExperience.module';
 import { IWorkExperience } from './interfaces';
 
+type WorkExperienceWithSelectedProps = Pick<
+  IWorkExperience,
+  | 'enterpriseName'
+  | 'description'
+  | 'imagePath'
+  | 'role'
+  | 'time'
+  | 'isTheFirst'
+  | 'link'
+>;
+
 const WorkExperience = ({
   enterpriseName,
   description,
@@ -21,10 +32,15 @@ const WorkExperience = ({
   role,
   time,
   isTheFirst = false,
-}: IWorkExperience) => {
+  link,
+}: WorkExperienceWithSelectedProps) => {
   return (
     <ContentContainer>
-      <ImageContentContainer>
+      <ImageContentContainer
+        target="_blank"
+        href={link}
+        rel="noopener noreferrer"
+      >
         <ImageContainer>
           <Image width={50} height={50} src={imagePath} alt="Enterprise Logo" />
         </ImageContainer>
