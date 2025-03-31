@@ -18,8 +18,15 @@ import docker from './docker.svg';
 import github from './github.svg';
 import jest from './jest.svg';
 import swagger from './swagger.svg';
+import mongodb from './mongodb.svg';
+import javascript from './javascript.svg';
+import css from './css.svg';
+import html from './html5.svg';
 
 const icons = {
+  javascript,
+  css,
+  html,
   react,
   typescript,
   nextjs,
@@ -40,6 +47,7 @@ const icons = {
   github,
   jest,
   swagger,
+  mongodb,
 };
 
 export default icons;
