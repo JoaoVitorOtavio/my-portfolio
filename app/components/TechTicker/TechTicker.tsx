@@ -42,13 +42,7 @@ const TechTicker = () => {
           <MarqueeInner>
             {frontTechnologies.concat(frontTechnologies).map((tech, index) => (
               <Item key={index}>
-                <Image
-                  src={tech.icon}
-                  alt="Descrição da imagem"
-                  width={20}
-                  height={20}
-                  style={{ color: 'red' }}
-                />
+                <Image src={tech.icon} alt={tech.name} width={20} height={20} />
                 {tech.name}
               </Item>
             ))}
@@ -60,13 +54,7 @@ const TechTicker = () => {
           <MarqueeInner>
             {backTechologies.concat(backTechologies).map((tech, index) => (
               <Item key={index}>
-                <Image
-                  src={tech.icon}
-                  alt="Descrição da imagem"
-                  width={20}
-                  height={20}
-                  style={{ color: 'red' }}
-                />
+                <Image src={tech.icon} alt={tech.name} width={20} height={20} />
                 {tech.name}
               </Item>
             ))}
