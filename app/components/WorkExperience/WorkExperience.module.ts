@@ -37,7 +37,7 @@ export const Timeline = styled.div<ITimeline>`
     content: '';
     position: absolute;
     width: 2px;
-    height: ${(props) => (props.$isTheFirst ? '0px' : '350px')};
+    height: ${(props) => (props.$isTheFirst ? '0px' : '450px')};
     background-color: #27272b66;
     left: 50%;
     top: -1px;
