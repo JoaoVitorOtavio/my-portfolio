@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import theme from './styles/theme';
 import dynamic from 'next/dynamic';
 import Header from './components/Header/Header';
+import { useEffect, useState } from 'react';
 
 const Footer = dynamic(() => import('./components/Footer/Footer'), {
   ssr: true,
@@ -15,6 +16,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [hydrated, setHydrated] = useState(false);
+
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
+
+  if (!hydrated) return null;
+
   return (
     <html lang="en">
       <body>
