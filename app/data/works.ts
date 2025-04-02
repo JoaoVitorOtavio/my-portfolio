@@ -8,7 +8,7 @@ export const Works: IWorkExperience[] = [
       'Desenvolvi e mantive sistemas usando ReactJS, NextJS, Node.js e NestJS, incluindo um backoffice integrado ao ERP Millennium, um e-commerce completo e uma solução para transferência de produtos entre marketplaces. Também criei um Design System com Storybook e atuei em um projeto freelance de gestão de vendas.',
     imagePath: '/sonoma_logo.jpg',
     role: 'Full Stack Developer',
-    time: 'Jun, 2021 - Fev, 2025',
+    time: 'Jun, 2021 - Mar, 2025',
     techs: [
       { name: 'React', icon: icons.react },
       { name: 'Next', icon: icons.nextjs },
