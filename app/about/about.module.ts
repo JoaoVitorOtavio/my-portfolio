@@ -4,7 +4,6 @@ export const ContainerDescription = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  // background-color: red;
 
   @media (min-width: ${(props) => props.theme.breakpoints.desktop}px) {
     flex-direction: row;
@@ -29,7 +28,6 @@ export const Description = styled.p`
 `;
 
 export const ImageContainer = styled.div`
-  // border: 1px solid green;
   margin-bottom: 80px;
   width: 100%;
   display: flex;
@@ -40,13 +38,17 @@ export const ImageContainer = styled.div`
 `;
 
 export const TiltedImage = styled.div`
-  width: 70%;
+  width: 68%;
   height: 500px;
-  transform: rotate(5deg);
-  transition: transform 0.3s ease-in-out;
+  transform: perspective(0px);
 
-  &:hover {
-    transform: rotate(0deg);
+  @media (min-width: ${(props) => props.theme.breakpoints.desktop}px) {
+    transform: rotate(5deg);
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: rotate(0deg);
+    }
   }
 `;
 
@@ -105,7 +107,6 @@ export const MenuContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 10px;
-  // background-color: red;
   overflow-y: auto; /* Scroll vertical */
   padding: 15px 0 10px 0;
 `;
