@@ -108,7 +108,6 @@ export const DesktopMenuItem = styled.p<IItemMenu>`
   line-height: 1.5rem;
   font-weight: 600;
   cursor: pointer;
-  // border-bottom: 1px solid transparent;
   border-bottom: ${(props) => (props.$isActive ? '1px solid #3f3f46' : 'none')};
 
   &:hover {

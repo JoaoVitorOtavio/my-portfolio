@@ -1,5 +1,4 @@
 import Image from 'next/image';
-// import reactIcon from './assets/icons/react.svg';
 import icons from '../../assets/icons/icons';
 import {
   ContentContainer,
