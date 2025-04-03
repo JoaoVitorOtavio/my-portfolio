@@ -119,7 +119,6 @@ export const MenuItems = styled.div<IIsSelected>`
   cursor: pointer;
   white-space: nowrap;
   padding: 10px;
-  // border: 1px solid #27272b;
   border-radius: 8px;
 
   color: ${(props) => (props.$isSelected ? '#000' : '#fff')};
@@ -138,7 +137,6 @@ export const DescriptionContainer = styled.div<IIsSelected>`
   justify-content: space-evenly;
   align-items: center;
   min-height: 350px;
-  // height: 550px;
   background-color: #27272b66;
   border-radius: 8px;
   padding: 50px 20px 30px 20px;
@@ -172,7 +170,6 @@ export const TimeDescription = styled.p`
 `;
 
 export const ItemContainer = styled.div`
-  // background-color: red;
   width: 100%;
   display: flex;
   gap: 10px;
