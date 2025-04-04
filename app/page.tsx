@@ -1,13 +1,21 @@
 'use client';
 
+import { useEffect } from 'react';
+import Image from 'next/image';
+
 import {
   AboutContainer,
   ContentContainer,
   Description,
   DescriptionAndIcon,
+  DescriptionCardContainer,
+  Emphasis,
+  LetsTalkContainer,
   Main,
+  PhotoContainer,
   SocialIcon,
   SocialLinks,
+  SocialLinksContainer,
   Title,
   TitleAndImageContainer,
 } from './page.module';
@@ -17,7 +25,7 @@ import GitHubContributions from './components/GitHubContributions/GitHubContribu
 import WorkExperience from './components/WorkExperience/WorkExperience';
 import Icons from './assets/icons/tecs-icons';
 import TechTicker from './components/TechTicker/TechTicker';
-import { useEffect } from 'react';
+import CardDescription from './components/CardDescription/CardDescription';
 
 export default function Home() {
   useEffect(() => {
@@ -29,39 +37,86 @@ export default function Home() {
       <Main>
         <TitleAndImageContainer>
           <ContentContainer>
+            <PhotoContainer>
+              <Image
+                src="/me.jpg"
+                alt="Me"
+                height={200}
+                width={200}
+                priority={true}
+                style={{
+                  objectFit: 'cover',
+                  borderRadius: '50%',
+                }}
+              />
+            </PhotoContainer>
             <DescriptionAndIcon>
               <AboutContainer>
                 <Title>
-                  Desenvolvedor Full Stack | React | Node.js | Next.js |
-                  TypeScript
+                  <Emphasis $color="#0cce6b">Desenvolvedor Full Stack</Emphasis>{' '}
+                  React | Node.js | Next.js | TypeScript
                 </Title>
                 <Description>
-                  Olá! Me chamo João Vitor e sou um desenvolvedor Full Stack
-                  apaixonado por tecnologia e pela criação de soluções
-                  eficientes e escaláveis.
-                  <br />
-                  Tenho experiência com React, Next.js e Node.js, atuando no
-                  desenvolvimento de e-commerces, backoffices e integrações com
-                  marketplaces, sempre focado em performance, escalabilidade e
-                  experiência do usuário. Além do desenvolvimento web, também
-                  trabalhei com React Native, criando portais administrativos e
-                  aplicações mobile para diversos segmentos.
-                  <br />
-                  No backend, já desenvolvi aplicações robustas utilizando
-                  NestJS, Sequelize, Prisma e PostgreSQL, sempre aplicando boas
-                  práticas de código, testes automatizados (Jest) e arquitetura
-                  escalável.
-                  <br />
-                  Sou movido por desafios e estou constantemente aprendendo
-                  novas tecnologias para aprimorar minhas habilidades. Acredito
-                  que um bom desenvolvedor vai além do código: entender o
-                  negócio e entregar soluções estratégicas e eficazes faz toda a
-                  diferença.
-                  <br />
-                  <br />
-                  🚀 Sempre aberto a novas conexões e oportunidades!
+                  Olá! Me chamo <Emphasis>João Vitor</Emphasis> e sou um{' '}
+                  <Emphasis>desenvolvedor Full Stack</Emphasis> apaixonado por
+                  tecnologia e pela criação de{' '}
+                  <Emphasis>soluções eficientes e escaláveis.</Emphasis>
                 </Description>
-                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                <DescriptionCardContainer>
+                  <CardDescription
+                    title={'DESENVOLVIMENTO WEB'}
+                    description={
+                      <>
+                        Tenho experiência com{' '}
+                        <Emphasis>React, Next.js e Node.js</Emphasis>, atuando
+                        no desenvolvimento de:
+                      </>
+                    }
+                    topics={[
+                      'E-commerces',
+                      'Backoffices',
+                      'Integrações com marketplaces',
+                    ]}
+                  />
+                  <CardDescription
+                    title={'APLICAÇÕES MOBILE'}
+                    description={
+                      <>
+                        Além do desenvolvimento web, também trabalhei com{' '}
+                        <Emphasis>React Native</Emphasis>, criando:
+                      </>
+                    }
+                    topics={[
+                      'Portais administrativos',
+                      'Aplicações mobile para diversos segmentos',
+                    ]}
+                  />
+                  <CardDescription
+                    title={'BACKEND E BANCO DE DADOS'}
+                    description={
+                      <>Já desenvolvi aplicações robustas utilizando:</>
+                    }
+                    topics={[
+                      'NestJS, Sequelize, Prisma e PostgresSQL',
+                      'Boas práticas de código',
+                      'Testes automatizados (Jest)',
+                    ]}
+                  />
+                  <CardDescription
+                    title={'MEU DIFERENCIAL'}
+                    description={<></>}
+                    topics={[
+                      'Sou movido por desafios',
+                      'Aprendizado constante',
+                      'Apaixonado por ajudar pessoas',
+                    ]}
+                  />
+                </DescriptionCardContainer>
+                <LetsTalkContainer>
+                  <p>🚀 Sempre aberto a novas conexões e oportunidades!</p>
+                  <Emphasis $color="#0cce6b">VAMOS CONVERSAR ?</Emphasis>
+                </LetsTalkContainer>
+                <SocialLinksContainer>
                   {socialLinks.map((social) => (
                     <SocialLinks
                       key={social.id}
@@ -74,7 +129,7 @@ export default function Home() {
                       {social.name}
                     </SocialLinks>
                   ))}
-                </div>
+                </SocialLinksContainer>
               </AboutContainer>
             </DescriptionAndIcon>
             <Icons />
