@@ -107,6 +107,7 @@ export const Title = styled.h1`
   line-height: 1.25;
   color: #fff;
   font-weight: 700;
+  text-align: center;
 
   margin-bottom: 30px;
 
@@ -119,6 +120,7 @@ export const Title = styled.h1`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: unset;
   }
 `;
 
