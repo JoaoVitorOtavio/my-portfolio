@@ -177,3 +177,7 @@ export const LetsTalkContainer = styled.div`
   margin: 50px 0 30px 0;
   color: #a1a1aa;
 `;
+
+export const LetsTalkText = styled.p`
+  text-align: center;
+`;

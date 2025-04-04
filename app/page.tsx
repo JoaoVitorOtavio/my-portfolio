@@ -20,6 +20,7 @@ import {
   Title,
   TitleAndImageContainer,
   TitleAndPhotoContainer,
+  LetsTalkText,
 } from './page.module';
 import { socialLinks } from './data/social';
 import { Works } from './data/works';
@@ -130,7 +131,9 @@ export default function Home() {
                   />
                 </DescriptionCardContainer>
                 <LetsTalkContainer>
-                  <p>🚀 Sempre aberto a novas conexões e oportunidades!</p>
+                  <LetsTalkText>
+                    🚀 Sempre aberto a novas conexões e oportunidades!
+                  </LetsTalkText>
                   <Emphasis $color="#0cce6b">VAMOS CONVERSAR ?</Emphasis>
                 </LetsTalkContainer>
                 <SocialLinksContainer>
