@@ -16,7 +16,7 @@ export const HeaderContainer = styled.header`
   line-height: 1.25rem;
 
   @media (min-width: ${(props) => props.theme.breakpoints.tablet}px) {
-    margin-bottom: 115px;
+    margin-bottom: 30px;
     padding-top: 24px;
     padding-bottom: 24px;
   }

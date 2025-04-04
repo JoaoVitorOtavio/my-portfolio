@@ -16,8 +16,10 @@ import {
   SocialIcon,
   SocialLinks,
   SocialLinksContainer,
+  TitleAndPhotoBackgroundImage,
   Title,
   TitleAndImageContainer,
+  TitleAndPhotoContainer,
 } from './page.module';
 import { socialLinks } from './data/social';
 import { Works } from './data/works';
@@ -37,29 +39,35 @@ export default function Home() {
       <Main>
         <TitleAndImageContainer>
           <ContentContainer>
-            <PhotoContainer>
-              <Image
-                src="/me.jpg"
-                alt="Me"
-                height={200}
-                width={200}
-                priority={true}
-                style={{
-                  objectFit: 'cover',
-                  borderRadius: '50%',
-                }}
-              />
-            </PhotoContainer>
             <DescriptionAndIcon>
               <AboutContainer>
-                <Title>
-                  <Emphasis $color="#0cce6b">Desenvolvedor Full Stack</Emphasis>{' '}
-                  React | Node.js | Next.js | TypeScript
-                </Title>
+                <TitleAndPhotoContainer>
+                  <TitleAndPhotoBackgroundImage />
+                  <Title>
+                    <Emphasis $color="#0cce6b">
+                      Desenvolvedor Full Stack
+                    </Emphasis>{' '}
+                    React | Node.js | Next.js | TypeScript
+                  </Title>
+                  <PhotoContainer>
+                    <Image
+                      src="/me.jpg"
+                      alt="Me"
+                      height={250}
+                      width={250}
+                      priority={true}
+                      style={{
+                        objectFit: 'cover',
+                        borderRadius: '50%',
+                      }}
+                    />
+                  </PhotoContainer>
+                </TitleAndPhotoContainer>
                 <Description>
                   Olá! Me chamo <Emphasis>João Vitor</Emphasis> e sou um{' '}
-                  <Emphasis>desenvolvedor Full Stack</Emphasis> apaixonado por
-                  tecnologia e pela criação de{' '}
+                  <Emphasis>desenvolvedor Full Stack</Emphasis> apaixonado
+                  <br />
+                  por tecnologia e pela criação de{' '}
                   <Emphasis>soluções eficientes e escaláveis.</Emphasis>
                 </Description>
                 <DescriptionCardContainer>
@@ -104,7 +112,16 @@ export default function Home() {
                   />
                   <CardDescription
                     title={'MEU DIFERENCIAL'}
-                    description={<></>}
+                    description={
+                      <>
+                        Na área de tecnologia,{' '}
+                        <Emphasis>procuro sempre exercer empatia</Emphasis>, me
+                        colocando no lugar dos outros para{' '}
+                        <Emphasis>colaborar melhor</Emphasis>, entender
+                        necessidades e{' '}
+                        <Emphasis>construir soluções mais humanas.</Emphasis>
+                      </>
+                    }
                     topics={[
                       'Sou movido por desafios',
                       'Aprendizado constante',

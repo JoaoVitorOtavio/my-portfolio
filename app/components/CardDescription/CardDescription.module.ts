@@ -7,6 +7,11 @@ export const DescriptionCard = styled.div`
   background-color: #2c2c2e;
   color: #a1a1aa;
   padding: 5%;
+
+  @media (min-width: ${(props) => props.theme.breakpoints.tablet}px) {
+    width: 42%;
+    padding: 3%;
+  }
 `;
 
 export const DescriptionCardContainer = styled.div`
