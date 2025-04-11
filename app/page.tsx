@@ -82,8 +82,8 @@ export default function Home() {
                       </>
                     }
                     topics={[
-                      'E-commerces',
-                      'Backoffices',
+                      'Marketplace',
+                      'Backoffice',
                       'Integrações com marketplaces',
                     ]}
                   />
@@ -96,8 +96,9 @@ export default function Home() {
                       </>
                     }
                     topics={[
-                      'Portais administrativos',
-                      'Aplicações mobile para diversos segmentos',
+                      'Sistema de chat com comunicação em tempo real',
+                      'Trilhas educativas com integração de vídeos e artigos',
+                      'Aplicativos voltados à saúde e qualidade do sono',
                     ]}
                   />
                   <CardDescription
@@ -106,7 +107,7 @@ export default function Home() {
                       <>Já desenvolvi aplicações robustas utilizando:</>
                     }
                     topics={[
-                      'NestJS, Sequelize, Prisma e PostgresSQL',
+                      'NestJS, Sequelize, NodeJS, Prisma e PostgresSQL/MySQL',
                       'Boas práticas de código',
                       'Testes automatizados (Jest)',
                     ]}
