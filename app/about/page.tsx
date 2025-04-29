@@ -67,7 +67,7 @@ export default function About() {
             sem ela na minha vida. Cada linha de código representa não apenas um
             desafio superado, mas também uma oportunidade de crescimento pessoal
             e profissional. Com experiência em React, Next.js e Node.js,
-            participei do desenvolvimento de e-commerces, backoffices e
+            participei do desenvolvimento de marketplace, backoffices e
             integrações com marketplaces, sempre focando em performance e na
             melhor experiência para o usuário. Além do desenvolvimento web,
             tenho vivência em aplicações mobile com React Native, portais

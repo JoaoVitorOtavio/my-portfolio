@@ -5,7 +5,7 @@ export const Works: IWorkExperience[] = [
   {
     enterpriseName: 'Sonoma Market',
     description:
-      'Desenvolvi e mantive sistemas usando ReactJS, NextJS, Node.js e NestJS, incluindo um backoffice integrado ao ERP Millennium, um e-commerce completo e uma solução para transferência de produtos entre marketplaces. Também criei um Design System com Storybook e atuei em um projeto freelance de gestão de vendas.',
+      'Desenvolvi e mantive sistemas usando ReactJS, NextJS, Node.js e NestJS, incluindo um backoffice integrado ao ERP Millennium, um marketplace completo e uma solução para transferência de produtos entre marketplaces. Também criei um Design System com Storybook e atuei em um projeto freelance de gestão de vendas.',
     imagePath: '/sonoma_logo.jpg',
     role: 'Full Stack Developer',
     time: 'Jun, 2021 - Mar, 2025',
@@ -31,9 +31,9 @@ export const Works: IWorkExperience[] = [
     ],
     link: 'https://www.sonoma.com.br/',
     detailedDescription: `
+      <b>Marketeplace:</b> Participação no desenvolvimento de um marketplace usando <b>Next.js</b>, <b>TypeScript</b>, <b>React Query</b>, <b>Node.js</b>, <b>Sequelize</b> e <b>Styled Components</b>.<br><br>
       <b>Backoffice:</b> Desenvolvimento de um sistema de backoffice em <b>ReactJS</b> com <b>Node/Express</b>, integrado ao <b>ERP Millennium</b> e à plataforma <b>VTEX</b> (posteriormente migrado para <b>Magento</b>), garantindo alto desempenho e eficiência operacional.<br><br>
       <b>Design System:</b> Criação e documentação de um <b>Design System</b> exclusivo com <b>Storybook</b>, para otimizar a consistência de design e a colaboração entre equipes.<br><br>
-      <b>E-commerce:</b> Participação no desenvolvimento de um e-commerce usando <b>Next.js</b>, <b>TypeScript</b>, <b>React Query</b>, <b>Node.js</b>, <b>Sequelize</b> e <b>Styled Components</b>.<br><br>
       <b>Integração de Marketplaces:</b> Desenvolvimento de uma plataforma de intermediação para transferência de produtos entre e-commerces/marketplaces, utilizando <b>NestJS</b>, <b>Jest</b>, <b>Prisma</b>, <b>Postgres</b> e <b>Axios</b>. Projeto assegurou migração de dados contínua e sem interrupções.<br><br>
       <b>Sistema para Consultores de Vendas (Freelance):</b> Criação de uma plataforma para consultores de vendas em <b>Node.js</b> e <b>React</b>, com integração ao <b>ERP</b> para registro de transações, otimizando o controle de vendas e formalização de pagamentos.
     `,
@@ -61,7 +61,7 @@ export const Works: IWorkExperience[] = [
     description:
       'Desenvolvi projetos para melhorar a experiência do usuário e otimizar ferramentas da empresa, como um aplicativo de saúde e bem-estar em React Native, Redux e Node.js, um portal administrativo em ReactJS, Node.js e Redux para gestão de operações e dados, e landing pages otimizadas para divulgação e engajamento do público.',
     imagePath: '/ukor_logo.jpg',
-    role: 'Full Stack Developer',
+    role: 'Full Stack Developer / Mobile',
     time: 'Abr, 2019 - Jan, 2021',
     techs: [
       { name: 'React', icon: icons.react },
