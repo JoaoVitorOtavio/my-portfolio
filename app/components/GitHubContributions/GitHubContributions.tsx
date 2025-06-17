@@ -25,7 +25,6 @@ const GitHubContributions = () => {
   };
 
   const [hasData, setHasData] = useState<boolean | null>(null);
-  console.log('HASDATA', hasData);
 
   useEffect(() => {
     setHasData(null);

@@ -14,12 +14,10 @@ export default function StyledComponentsRegistry({
   useServerInsertedHTML(() => {
     const styles = styledComponentsStyleSheet.getStyleElement();
     styledComponentsStyleSheet.instance.clearTag();
-    console.log('✅ Styled-components estilos inseridos!', styles);
     return <>{styles}</>;
   });
 
   if (typeof window !== 'undefined') {
-    console.log('✅ Renderizando no client!');
     return <>{children}</>;
   }
 
