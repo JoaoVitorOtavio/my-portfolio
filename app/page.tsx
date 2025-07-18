@@ -52,7 +52,7 @@ export default function Home() {
                   </Title>
                   <PhotoContainer>
                     <Image
-                      src="/me.jpg"
+                      src="/me.webp"
                       alt="Me"
                       height={250}
                       width={250}

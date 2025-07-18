@@ -10,7 +10,7 @@ export const PhotoContainer = styled.div`
   width: 100%;
   left: 0;
   top: 130px;
-  background-image: url('Linhas-tech.png');
+  background-image: url('Linhas-tech.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -20,8 +20,6 @@ export const PhotoContainer = styled.div`
     display: flex;
     align-items: center;
     position: static;
-    left: none;
-    top: none;
     width: 50%;
     background-image: none;
   }
@@ -85,7 +83,7 @@ export const TitleAndPhotoBackgroundImage = styled.div`
     width: 70%;
     left: 30%;
 
-    background-image: url('Linhas-tech.png');
+    background-image: url('Linhas-tech.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

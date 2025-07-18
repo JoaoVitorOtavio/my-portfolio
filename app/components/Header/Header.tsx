@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import { FaBars, FaUserTie } from 'react-icons/fa6';
 import { FaHome } from 'react-icons/fa';
