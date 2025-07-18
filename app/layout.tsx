@@ -43,6 +43,27 @@ export default function RootLayout({
 
   return (
     <html lang="pt-BR" className={`${inter.variable} ${poppins.variable}`}>
+      <head>
+        <meta
+          name="google-site-verification"
+          content="_zqnYHHgSLpvItz6BNBYgnf6JD3tFoYZJBoru290ng4"
+        />
+
+        <meta
+          name="description"
+          content="Portfólio de João Vitor Otavio, desenvolvedor full stack especializado em React, Next.js, Node.js e Nest.js"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta
+          property="og:title"
+          content="João Vitor Otavio - Desenvolvedor Full Stack"
+        />
+        <meta
+          property="og:description"
+          content="Portfólio profissional com projetos, blog e informações de contato."
+        />
+        <meta property="og:url" content="https://joaovitorotavio.com.br" />
+      </head>
       <body>
         <StyledComponentsRegistry>
           <ThemeProvider theme={theme}>
